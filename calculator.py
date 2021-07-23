@@ -1,24 +1,39 @@
+#VARS AND LISTS
+global operation 
+global status
+operations = ["+","plus","-","minus", "/", "divide","*","multiply"]
+problem = []
+
+#FUNCS
+def ch_op():
+    while True:
+        operation = input("Choose operation:")
+        if operation == "=":
+            return 1
+            
+        elif operation in operations:
+            problem.append(operation)
+            print(problem)
+            return 0
+            
+        else:
+            continue
+#input numbers and choose operation
+
 while True:
+    
     try:
-        a = int(input("First number:"))
-        b = input("Choose operation:")
-        c = int(input("Second number:"))
-        break
+        number = int(input("Number:"))
+        problem.append(str(number))
+        print(problem)
+        if(ch_op()):
+            break
+            
+       
+            
+        
     except:
         continue
-###operations
+#calculations themselves
 
-if b == "+" or b == "plus":
-    res = a+c        
-elif b == "-" or b == "minus":
-    res = a-c
-elif b == "*" or b == "multiply":
-    res = a*c
-elif b == "/" or b == "divide":
-    res = a/c
-else:
-    print("wrong operation")
-try:
-    print("result is:%s" % res)
-except:
-    pass
+print(problem + "ok")

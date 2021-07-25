@@ -19,7 +19,11 @@ def operation():
         else:
             print("Wrong operation, try again")
             continue
-        
+
+
+mid_result = eval(str(number()) + operation() + str(number()))
+print(mid_result)
 while True:
-    print(eval(str(number()) + operation() + str(number())))
-        
+    result = eval(str(mid_result) + operation() + str(number()))
+    print(result)
+    mid_result = result

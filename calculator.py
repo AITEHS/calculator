@@ -1,6 +1,6 @@
+import math
 #list of avaliable operations
 operations = ["+","-","/","*"]
-#choose number and make sure it's number
 def number():
     while True:
         try:
@@ -20,10 +20,11 @@ def operation():
             print("Wrong operation, try again")
             continue
 
-
+#midresult saves result for next operations
 mid_result = eval(str(number()) + operation() + str(number()))
 print(mid_result)
 while True:
     result = eval(str(mid_result) + operation() + str(number()))
     print(result)
+    #current value of midresult changes to last result
     mid_result = result

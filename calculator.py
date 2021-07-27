@@ -1,6 +1,6 @@
 import math
 #list of avaliable operations
-operations = ["+","-","/","*"]
+operations = ["+","-","/","*", "root"]
 def number():
     while True:
         try:
@@ -10,12 +10,19 @@ def number():
             print("It wasn't number, try again")
             continue
 #what to do with number
+def root(number, root):
+    return pow(number, root)
+
 def operation():
      while True:
 
         operation = input("Operation:")
         if operation in operations:
-            return operation
+            if operation == "root":
+                print( root(number(), number()))
+            else:
+                return operation
+            
         else:
             print("Wrong operation, try again")
             continue

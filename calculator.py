@@ -1,3 +1,4 @@
+#TODO impliment wrappers to make some functions better
 import math
 #list of avaliable operations
 operations = ["+","-","/","*", "root"]
